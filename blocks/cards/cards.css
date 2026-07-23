@@ -1,0 +1,31 @@
+.cards-container .cards-wrapper {
+  margin-top: var(--spacing-xbig);
+}
+
+.cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  gap: var(--spacing-medium);
+}
+
+.cards > ul > li {
+  border: var(--shape-border-width-1) solid var(--color-neutral-500);
+  background-color: var(--background-color);
+}
+
+.cards .cards-card-body {
+  margin: var(--spacing-small);
+}
+
+.cards .cards-card-image {
+  line-height: 0;
+}
+
+.cards > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}

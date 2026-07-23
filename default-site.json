@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "code": {
+    "owner": "{ORG}",
+    "repo": "{REPO}",
+    "source": {
+      "type": "github",
+      "url": "https://github.com/{ORG}/{REPO}"
+    }
+  },
+  "content": {
+    "source": {
+      "url": "{CONTENT_SOURCE}",
+      "type": "onedrive"
+    }
+  },
+  "cdn": {
+    "live": {
+      "host": "main--{SITE}--{ORG}.aem.live"
+    },
+    "preview": {
+      "host": "main--{SITE}--{ORG}.aem.page"
+    }
+  },
+  "headers": {},
+  "public": {
+    "default": {
+      "commerce-core-endpoint": "{ENDPOINT}",
+      "commerce-endpoint": "{CS_ENDPOINT}",
+      "headers": {
+        "all": {
+          "Store": "default"
+        },
+        "cs": {
+          "Magento-Store-Code": "{STORE_CODE}",
+          "Magento-Store-View-Code": "{STORE_VIEW_CODE}",
+          "Magento-Website-Code": "{WEBSITE_CODE}",
+          "x-api-key": "{COMMERCE_API_KEY}",
+          "Magento-Environment-Id": "{COMMERCE_ENVIRONMENT_ID}"
+        }
+      },
+      "analytics": {
+        "base-currency-code": "USD",
+        "environment": "Production",
+        "store-id": "{STORE_ID}",
+        "store-name": "Main Website Store",
+        "store-url": "{DOMAIN}",
+        "store-view-id": "{STORE_VIEW_ID}",
+        "store-view-name": "Default Store View",
+        "website-id": "{WEBSITE_ID}",
+        "website-name": "Main Website"
+      },
+      "plugins": {
+        "picker": {
+           "rootCategory": "{YOUR_ROOT_CATEGORY_ID}"
+         }
+      }
+    }
+  },
+  "robots": {
+    "txt": "User-agent: *\nAllow: /\nDisallow: /drafts/\nDisallow: /enrichment/\nDisallow: /tools/\nDisallow: /plugins/experimentation/\n\nSitemap: https://{DOMAIN}/sitemap-index.xml"
+  },
+  "access": {
+    "admin": {
+      "role": {
+        "config_admin": [
+          "{ADMIN_USER_EMAIL}"
+        ]
+      },
+      "requireAuth": "auto"
+    }
+  }
+}
