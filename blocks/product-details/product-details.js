@@ -107,6 +107,7 @@ export default async function decorate(block) {
       </div>
       <div class="product-details__right-column">
         <div class="product-details__header"></div>
+        <div class="product-details__tagline pdp-tagline" aria-label="Promotional offer"></div>
         <div class="product-details__price"></div>
         <div class="product-details__gallery"></div>
         <div class="product-details__short-description"></div>
@@ -128,6 +129,7 @@ export default async function decorate(block) {
   const $alert = fragment.querySelector('.product-details__alert');
   const $gallery = fragment.querySelector('.product-details__gallery');
   const $header = fragment.querySelector('.product-details__header');
+  const $tagline = fragment.querySelector('.product-details__tagline');
   const $price = fragment.querySelector('.product-details__price');
   const $galleryMobile = fragment.querySelector('.product-details__right-column .product-details__gallery');
   const $shortDescription = fragment.querySelector('.product-details__short-description');
@@ -140,7 +142,9 @@ export default async function decorate(block) {
   const $attributes = fragment.querySelector('.product-details__attributes');
 
   block.replaceChildren(fragment);
-
+  if ($tagline) {
+   $tagline.textContent = 'Free shipping on orders over $50';
+  }
   const gallerySlots = {
     CarouselThumbnail: (ctx) => {
       if (ctx.mediaType === 'image') {
