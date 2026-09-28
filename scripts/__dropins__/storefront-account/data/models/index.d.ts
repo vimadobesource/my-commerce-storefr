@@ -22,4 +22,5 @@ export * from './order-history-list';
 export * from './store-config';
 export * from './stored-payment-method';
 export * from './admin-assistance-actions';
-//# sourceMappingURL=index.d.ts.map
+export * from './company-address';
+export * from './company-address-book';
