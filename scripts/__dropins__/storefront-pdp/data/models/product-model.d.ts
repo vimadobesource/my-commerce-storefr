@@ -1,5 +1,19 @@
+/**
+ * ADOBE CONFIDENTIAL
+ * __________________
+ * Copyright 2023 Adobe
+ * All Rights Reserved.
+ * __________________
+ * NOTICE: All information contained herein is, and remains
+ * the property of Adobe and its suppliers, if any. The intellectual
+ * and technical concepts contained herein are proprietary to Adobe
+ * and its suppliers and are protected by all applicable intellectual
+ * property laws, including trade secret and copyright laws.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe.
+ */
 import { ProductType } from './acdl-models';
-
 export interface ProductModel {
     name: string;
     sku: string;
@@ -68,12 +82,16 @@ export interface Option {
     multiple: boolean;
     items: OptionValue[];
 }
-interface OptionValue {
+export interface OptionValue {
     id: string;
     label: string;
     inStock: boolean;
     value: string;
     selected: boolean;
+    /** Default quantity from Catalog Service for bundle option values. */
+    quantity?: number;
+    /** When true, shoppers may change this bundle option value quantity. */
+    canEditQuantity?: boolean;
     product?: any;
 }
 interface Attribute {
@@ -83,4 +101,3 @@ interface Attribute {
     roles?: string[];
 }
 export {};
-//# sourceMappingURL=product-model.d.ts.map

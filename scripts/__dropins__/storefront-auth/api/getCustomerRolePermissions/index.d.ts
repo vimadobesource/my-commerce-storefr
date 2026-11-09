@@ -6,5 +6,4 @@
  * file in accordance with the terms of the Adobe license agreement
  * accompanying it.
  *******************************************************************/
-export * from './getCustomerRolePermissions';
-//# sourceMappingURL=index.d.ts.map
+export * from './getCustomerRolePermissions.d.ts';

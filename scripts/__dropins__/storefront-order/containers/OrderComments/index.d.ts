@@ -6,6 +6,5 @@
  * file in accordance with the terms of the Adobe license agreement
  * accompanying it.
  *******************************************************************/
-export * from './OrderComments';
-export { OrderComments as default } from './OrderComments';
-//# sourceMappingURL=index.d.ts.map
+export * from './OrderComments.js';
+export { OrderComments as default } from './OrderComments.js';
